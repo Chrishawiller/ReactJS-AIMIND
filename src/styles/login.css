@@ -1,0 +1,141 @@
+/* styles/login.css */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 2rem;
+}
+
+.login-container {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.login-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 500px;
+}
+
+.login-form {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-form h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.login-agreement {
+  color: #7f8c8d;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.signup-btn {
+  width: 100%;
+  padding: 1rem;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.signup-btn:hover {
+  background-color: #3a7bc8;
+}
+
+.login-redirect {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: #7f8c8d;
+}
+
+.login-redirect a {
+  color: #4a90e2;
+  text-decoration: none;
+}
+
+.login-features {
+  padding: 3rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-features h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.login-features ul {
+  list-style: none;
+}
+
+.login-features li {
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.login-features li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.login-footer {
+  padding: 1.5rem;
+  text-align: center;
+  background-color: #f8f9fa;
+  color: #7f8c8d;
+  border-top: 1px solid #e9ecef;
+}
+
+@media (max-width: 768px) {
+  .login-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .login-features {
+    order: -1;
+    padding: 2rem;
+  }
+}
