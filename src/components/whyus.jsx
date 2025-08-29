@@ -1,6 +1,7 @@
 // components/WhyUs.jsx
 import React from 'react';
 import '../styles/whyus.css';
+import { FaSearch, FaGraduationCap, FaLaptopCode, FaAward } from 'react-icons/fa';
 
 const WhyUs = () => {
   return (
