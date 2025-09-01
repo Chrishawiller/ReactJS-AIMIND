@@ -1,14 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Make sure this import exists
+import { Link } from 'react-router-dom'; // Add this import
 import '../styles/login.css';
 
-const Login = () => {
+const Signup = () => {
   return (
     <div className="auth-container">
       <div className="auth-left">
-        <h1>Log in</h1>
+        <h1>Sign up</h1>
         <p className="auth-agreement">
-          Welcome back! Please enter your details to continue.
+          By signing up, you agree to the{' '}
+          <a href="#" className="auth-link">Terms of use</a> and{' '}
+          <a href="#" className="auth-link">Privacy Policy.</a>
         </p>
         <form className="auth-form">
           <div className="form-group">
@@ -20,19 +22,10 @@ const Login = () => {
               className="auth-input"
             />
           </div>
-          <div className="form-group">
-            <label htmlFor="password">Password</label>
-            <input 
-              type="password" 
-              id="password" 
-              placeholder="Enter your password" 
-              className="auth-input"
-            />
-          </div>
-          <button type="submit" className="auth-btn">Log in</button>
+          <button type="submit" className="auth-btn">Sign up</button>
         </form>
         <p className="auth-redirect">
-          Don't have an account? <Link to="/signup">Sign up</Link>
+          Already have an account? <Link to="/login">Log in</Link>
         </p>
       </div>
       
@@ -56,4 +49,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;

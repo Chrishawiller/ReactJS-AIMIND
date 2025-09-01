@@ -1,10 +1,9 @@
-// App.jsx
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Home from './pages/home';
 import LoginPage from './pages/loginpage';
-import CoursesPage from './pages/coursespage';
+import SignupPage from './pages/signuppage'; 
 import AboutPage from './pages/AboutPage';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 
 function App() {
@@ -14,7 +13,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/courses" element={<CoursesPage />} />
+          <Route path="/signup" element={<SignupPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/courses" element={<Navigate to="/#courses" replace />} />
         </Routes>
       </div>
     </Router>

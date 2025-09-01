@@ -1,21 +1,19 @@
-// components/WhyUs.jsx
 import React from 'react';
 import '../styles/whyus.css';
-import { FaSearch, FaGraduationCap, FaLaptopCode, FaAward } from 'react-icons/fa';
 
 const WhyUs = () => {
   return (
     <section className="whyus" id="whyus">
       <div className="container">
         <div className="section-header">
-          <h2>Our Learning Process</h2>
-          <p>A simple step-by-step journey to master your skills</p>
+          <span className="process-subtitle">Our Learning Process</span>
+          <h2 className="process-title">A simple step-by-step<br />journey to master your skills</h2>
         </div>
         
         <div className="learning-process">
           <div className="process-step">
             <div className="step-icon">
-              <FaSearch />
+               <img src="/src/assets/icons/magnify.svg" alt="Previous" className="icon" />  
             </div>
             <h3>Explore</h3>
             <p>Browse through our courses and pick one that suits your career goals.</p>
@@ -23,15 +21,15 @@ const WhyUs = () => {
           
           <div className="process-step">
             <div className="step-icon">
-              <FaGraduationCap />
+               <img src="/src/assets/icons/trophy.svg" alt="Previous" className="icon" />  
             </div>
             <h3>Learn</h3>
-            <p>Eos vero dolore elmrod diam duo lonem magna sit sea dolore sancius sed et</p>
+            <p>Eos vero dolore eirmod diam duo lorem magna sit sea dolore sanctus sed et</p>
           </div>
           
           <div className="process-step">
             <div className="step-icon">
-              <FaLaptopCode />
+               <img src="/src/assets/icons/grad cap.svg" alt="Previous" className="icon" />  
             </div>
             <h3>Practice</h3>
             <p>Apply what you've learned with assignments and projects.</p>
@@ -39,7 +37,7 @@ const WhyUs = () => {
           
           <div className="process-step">
             <div className="step-icon">
-              <FaAward />
+               <img src="/src/assets/icons/curly bracket.svg" alt="Previous" className="icon" />  
             </div>
             <h3>Achieve</h3>
             <p>Earn certifications and showcase your skills to companies.</p>

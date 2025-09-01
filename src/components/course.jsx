@@ -1,4 +1,3 @@
-// components/Courses.jsx
 import React from 'react';
 import '../styles/courses.css';
 
@@ -8,78 +7,68 @@ const Courses = () => {
       id: 1,
       title: "Web Design & Development Courses for Beginner",
       students: 25,
-      duration: "30m",
+      duration: "01h 30m",
       rating: 4.5,
       reviews: 250,
       price: 999,
-      discountPrice: 599,
-      image: "https://via.placeholder.com/300x200"
+      image: "/src/assets/images/img3.png"
     },
     {
       id: 2,
-      title: "App Development Course",
-      students: 32,
-      duration: "45m",
-      rating: 4.7,
-      reviews: 180,
-      price: 1199,
-      discountPrice: 799,
-      image: "https://via.placeholder.com/300x200"
+      title: "Web Design & Development Courses for Beginner",
+      students: 25,
+      duration: "01h 30m",
+      rating: 4.5,
+      reviews: 250,
+      price: 599,
+      image: "/src/assets/images/img3.png"
     },
     {
       id: 3,
-      title: "Digital Marketing Masterclass",
-      students: 45,
-      duration: "1h",
-      rating: 4.8,
-      reviews: 320,
-      price: 1499,
-      discountPrice: 999,
-      image: "https://via.placeholder.com/300x200"
-    },
-    {
-      id: 4,
-      title: "Data Science Fundamentals",
-      students: 28,
-      duration: "1.5h",
-      rating: 4.6,
-      reviews: 210,
-      price: 1299,
-      discountPrice: 899,
-      image: "https://via.placeholder.com/300x200"
+      title: "Web Design & Development Courses for Beginner",
+      students: 25,
+      duration: "01h 30m",
+      rating: 4.5,
+      reviews: 250,
+      price: 999,
+      image: "/src/assets/images/img3.png"
     }
   ];
 
   return (
     <section className="courses">
       <div className="container">
-        <div className="courses-grid">
+        <h2 className="courses-title">COURSES</h2>
+        <div className="courses-scroll">
           {courses.map(course => (
             <div key={course.id} className="course-card">
-              <div className="course-image">
-                <img src={course.image} alt={course.title} />
-                <div className="course-badge">Popular</div>
-              </div>
+              <img src={course.image} alt={course.title} className="course-image" />
               
               <div className="course-content">
                 <div className="course-meta">
-                  <span>{course.students} Students</span>
-                  <span>{course.duration}</span>
+                  <div className="meta-item">
+                    <i className="fas fa-user-friends"></i>
+                    <span>{course.students} Students</span>
+                  </div>
+                  <div className="meta-item">
+                    <i className="far fa-clock"></i>
+                    <span>{course.duration}</span>
+                  </div>
                 </div>
                 
                 <h3>{course.title}</h3>
                 
-                <div className="course-rating">
-                  <span className="rating">{course.rating}</span>
-                  <span className="reviews">({course.reviews})</span>
-                </div>
+                <hr className="course-divider" />
                 
-                <div className="course-pricing">
-                  <span className="original-price">${course.price}</span>
-                  <span className="discount-price">${course.discountPrice}</span>
+                <div className="course-footer">
+                  <div className="rating">
+                    <i className="fas fa-star"></i>
+                    <span>{course.rating}({course.reviews})</span>
+                  </div>
+                  <div className="price">
+                    ${course.price}
+                  </div>
                 </div>
-                
-                <button className="enroll-btn">Enroll Now</button>
               </div>
             </div>
           ))}
